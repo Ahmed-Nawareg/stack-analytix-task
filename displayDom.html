@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Captured DOM</title>
+    <style>
+        #capturedDOMContainer {
+            width: 100%;
+            height: 90vh;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+    <script src="firebaseConfig.js"></script> <!-- Add reference to firebaseConfig.js file -->
+    <script src="displayDOM.js"></script> <!-- Add reference to displayDOM.js file -->
+</head>
+<body>
+    <h1>Display Captured DOM Content</h1>
+    <div id="capturedDOMContainer"></div>
+    
+    <script>
+        const docId = localStorage.getItem('capturedDocId');
+        if (docId) {
+            displayDOM(docId);
+        } else {
+            let iframeContainer = document.getElementById('capturedDOMContainer');
+            iframeContainer.innerText = 'No doc id';
+        }
+    </script>
+</body>
+</html>

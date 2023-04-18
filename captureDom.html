@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture DOM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="captureDOM.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Random Page</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><button id="captureBtn">Capture DOM</button></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Section 1</h2>
+      <p>This is the content of section 1. It could be some text, images, or other HTML elements.</p>
+    </section>
+    <section>
+      <h2>Section 2</h2>
+      <p>This is the content of section 2. It could be some text, images, or other HTML elements.</p>
+    </section>
+  </main>
+  <aside>
+    <h2>Aside</h2>
+    <p>This is the content of the aside section. It could be some additional information, ads, or other HTML elements.</p>
+  </aside>
+  <footer>
+    <p>&copy; 2023 Random Page. All rights reserved.</p>
+  </footer>
+
+    <script>
+        // Attach event listener to captureBtn
+        document.getElementById("captureBtn").addEventListener("click", captureDOM);
+    </script>
+</body>
+</html>
